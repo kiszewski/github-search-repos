@@ -1,12 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:github_search_repos/app/modules/user_repositories/userRepositories_page.dart';
-import 'package:github_search_repos/app/modules/user_repositories/userRepositories_store.dart';
 
 class UserRepositoriesModule extends Module {
   @override
-  final List<Bind> binds = [
-    Bind.lazySingleton((i) => UserRepositoriesStore()),
-  ];
+  final List<Bind> binds = [];
 
   @override
   final List<ModularRoute> routes = [

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:github_search_repos/app/models/repository_model.dart';
 import 'package:github_search_repos/app/modules/user_repositories/components/user_header_widget.dart';
-import 'package:github_search_repos/app/modules/user_repositories/userRepositories_store.dart';
 
 import 'components/repository_tile_widget.dart';
 
@@ -17,8 +15,6 @@ class UserRepositoriesPage extends StatefulWidget {
 }
 
 class UserRepositoriesPageState extends State<UserRepositoriesPage> {
-  final UserRepositoriesStore store = Modular.get();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
