@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hi_doc_app/app/modules/repository_webview/repositoryWebview_module.dart';
-import 'package:hi_doc_app/app/modules/user_repositories/userRepositories_module.dart';
+import 'package:github_search_repos/app/modules/repository_webview/repositoryWebview_module.dart';
+import 'package:github_search_repos/app/modules/user_repositories/userRepositories_module.dart';
 
 import 'modules/home/home_module.dart';
 

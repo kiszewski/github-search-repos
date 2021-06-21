@@ -1,4 +1,4 @@
-# hi_doc_app
+# github_search_repos
 
 A new Flutter project.
 

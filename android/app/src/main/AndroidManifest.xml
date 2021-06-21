@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hi_doc_app">
+    package="com.example.github_search_repos">
    <application
-        android:label="hi_doc_app"
+        android:label="github_search_repos"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

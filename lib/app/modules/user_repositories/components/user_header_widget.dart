@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hi_doc_app/app/models/owner_model.dart';
+import 'package:github_search_repos/app/models/owner_model.dart';
 
 class UserHeaderWidget extends StatelessWidget {
   final Owner user;

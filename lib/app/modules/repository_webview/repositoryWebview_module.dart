@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hi_doc_app/app/modules/repository_webview/repositoryWebview_page.dart';
-import 'package:hi_doc_app/app/modules/repository_webview/repositoryWebview_store.dart';
+import 'package:github_search_repos/app/modules/repository_webview/repositoryWebview_page.dart';
+import 'package:github_search_repos/app/modules/repository_webview/repositoryWebview_store.dart';
 
 class RepositoryWebviewModule extends Module {
   @override

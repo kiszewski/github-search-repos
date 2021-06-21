@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hi_doc_app/app/models/repository_model.dart';
+import 'package:github_search_repos/app/models/repository_model.dart';
 
 class RepositoryTileWidget extends StatelessWidget {
   final RepositoryModel repositoryModel;

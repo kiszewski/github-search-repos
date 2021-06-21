@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hi_doc_app/app/modules/user_repositories/userRepositories_page.dart';
-import 'package:hi_doc_app/app/modules/user_repositories/userRepositories_store.dart';
+import 'package:github_search_repos/app/modules/user_repositories/userRepositories_page.dart';
+import 'package:github_search_repos/app/modules/user_repositories/userRepositories_store.dart';
 
 class UserRepositoriesModule extends Module {
   @override

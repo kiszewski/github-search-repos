@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hi_doc_app/app/modules/home/components/search_button_widget.dart';
-import 'package:hi_doc_app/app/modules/home/home_store.dart';
+import 'package:github_search_repos/app/modules/home/components/search_button_widget.dart';
+import 'package:github_search_repos/app/modules/home/home_store.dart';
 
 class HomePage extends StatefulWidget {
   final String title;

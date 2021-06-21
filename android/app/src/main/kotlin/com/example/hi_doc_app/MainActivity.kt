@@ -1,4 +1,4 @@
-package com.example.hi_doc_app
+package com.example.github_search_repos
 
 import io.flutter.embedding.android.FlutterActivity
 
