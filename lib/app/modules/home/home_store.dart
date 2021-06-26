@@ -27,18 +27,13 @@ abstract class HomeStoreBase with Store {
   Future searchUserRepositories() async {
     _setErrorText(null);
 
-    final Response resp = await _repository.searchUserRepositories(username);
-
-    if (resp.statusCode == 200) {
-      final repos = resp.data as List;
-
-      final List<RepositoryModel> repositoryList =
-          repos.map((json) => RepositoryModel.fromJson(json)).toList();
+    try {
+      final repositories = await _repository.searchUserRepositories(username);
 
       Modular.to.pushNamed('/user_repositories',
-          arguments: {'repositories': repositoryList});
-    } else {
-      _setErrorText(resp.statusMessage ?? '');
+          arguments: {'repositories': repositories});
+    } on DioError catch (e) {
+      _setErrorText(e.message);
     }
   }
 }
