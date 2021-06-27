@@ -13,6 +13,6 @@ class HomeRepository {
 
       return repos.map((json) => RepositoryModel.fromJson(json)).toList();
     } else
-      throw ('error user not found');
+      throw Exception('Error user not found');
   }
 }
