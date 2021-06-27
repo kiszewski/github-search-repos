@@ -39,6 +39,21 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
+  final _$repositoriesAtom = Atom(name: 'HomeStoreBase.repositories');
+
+  @override
+  List<RepositoryModel> get repositories {
+    _$repositoriesAtom.reportRead();
+    return super.repositories;
+  }
+
+  @override
+  set repositories(List<RepositoryModel> value) {
+    _$repositoriesAtom.reportWrite(value, super.repositories, () {
+      super.repositories = value;
+    });
+  }
+
   final _$HomeStoreBaseActionController =
       ActionController(name: 'HomeStoreBase');
 
@@ -65,10 +80,22 @@ mixin _$HomeStore on HomeStoreBase, Store {
   }
 
   @override
+  dynamic _setRepositories(List<RepositoryModel> value) {
+    final _$actionInfo = _$HomeStoreBaseActionController.startAction(
+        name: 'HomeStoreBase._setRepositories');
+    try {
+      return super._setRepositories(value);
+    } finally {
+      _$HomeStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 username: ${username},
-errorText: ${errorText}
+errorText: ${errorText},
+repositories: ${repositories}
     ''';
   }
 }

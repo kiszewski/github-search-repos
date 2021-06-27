@@ -24,16 +24,21 @@ abstract class HomeStoreBase with Store {
   @action
   _setErrorText(String? value) => errorText = value;
 
-  Future searchUserRepositories() async {
+  @observable
+  List<RepositoryModel> repositories = [];
+  @action
+  _setRepositories(List<RepositoryModel> value) => repositories = value;
+
+  Future<bool> searchUserRepositories() async {
     _setErrorText(null);
 
     try {
-      final repositories = await _repository.searchUserRepositories(username);
-
-      Modular.to.pushNamed('/user_repositories',
-          arguments: {'repositories': repositories});
+      final result = await _repository.searchUserRepositories(username);
+      _setRepositories(result);
+      return repositories.isNotEmpty;
     } on DioError catch (e) {
       _setErrorText(e.message);
+      return false;
     }
   }
 }

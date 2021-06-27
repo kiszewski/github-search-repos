@@ -62,7 +62,14 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                 left: 30,
                 right: 30,
                 child: SearchButtonWidget(
-                  onTap: store.searchUserRepositories,
+                  onTap: () async {
+                    if (await store.searchUserRepositories()) {
+                      Modular.to.pushNamed(
+                        '/user_repositories',
+                        arguments: {'repositories': store.repositories},
+                      );
+                    }
+                  },
                   text: 'Search Repositories',
                 ))
           ],
